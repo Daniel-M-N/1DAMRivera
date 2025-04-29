@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="MainApp">
+    <top>
+        <VBox spacing="10" padding="10">
+            <HBox spacing="10">
+                <TextField fx:id="nombreField" promptText="Nombre del producto"/>
+                <TextField fx:id="descripcionField" promptText="Descripción"/>
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="cantidadField" promptText="Cantidad"/>
+                <TextField fx:id="precioField" promptText="Precio"/>
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Insertar" onAction="#handleInsert"/>
+                <Button text="Actualizar" onAction="#handleUpdate"/>
+                <Button text="Eliminar" onAction="#handleDelete"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nombreColumn" text="Nombre"/>
+                <TableColumn fx:id="descripcionColumn" text="Descripción"/>
+                <TableColumn fx:id="cantidadColumn" text="Cantidad"/>
+                <TableColumn fx:id="precioColumn" text="Precio"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
